@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Jquery</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <a href="#">Link1</a>
+    <h3 id="header">Kurslarım</h3>
+    <ul id="liste">
+      <li class="item1">Sıfırdan ileri düzey Web Geliştirme</li>
+      <li>
+        Python Sıfırdan Uzman Seviyesine Programlama <a href="#">Link2</a>
+      </li>
+      <li>Android ve İOS Mobil Uygulama Geliştirme</li>
+    </ul>
+
+    <script>
+      //document.getElementById("header").style.color = "blue";
+
+      $("#header").css("color", "orange");
+
+      //$("#liste a").css("text-decoration", "none");
+
+      $("a").css("text-decoration", "none");
+
+      var styles = {
+        color: "blue",
+        fontSize: "22px",
+        border: "1px solid gray",
+      };
+
+      $("ul li").css(styles);
+
+      var listeler = document.querySelectorAll("li");
+
+      for (var i = 0; i < listeler.length; i++) {
+        listeler[i].style.color = "red";
+      }
+
+      $("a").css({
+        color: "green",
+        fontSize: "16px",
+        border: "2px solid blue",
+      });
+    </script>
+  </body>
+</html>
