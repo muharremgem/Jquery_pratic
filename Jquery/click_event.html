@@ -7,6 +7,9 @@
         color: purple;
         font-size: 30px;
       }
+      .orange {
+        background-color: orange;
+      }
     </style>
   </head>
   <body>
@@ -20,6 +23,7 @@
         $(".paragraf").click(function () {
           //console.log("paragrafa tıklandı")
           $(this).addClass("paragrafrenklendir");
+          $(this).toggleClass("orange");
         });
       });
     </script>
