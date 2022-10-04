@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Jquery</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <style>
+      .paragrafrenklendir {
+        color: purple;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="p1">Sıfırdan ileri düzey Web Geliştirme</p>
+    <p id="p2">Sıfırdan ileri düzey Web Geliştirme</p>
+    <p class="paragraf">Sıfırdan ileri düzey Web Geliştirme</p>
+    <p class="paragraf">Sıfırdan ileri düzey Web Geliştirme</p>
+
+    <script>
+      $(document).ready(function () {
+        $(".paragraf").click(function () {
+          //console.log("paragrafa tıklandı")
+          $(this).addClass("paragrafrenklendir");
+        });
+      });
+    </script>
+  </body>
+</html>
