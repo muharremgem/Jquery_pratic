@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Jquery</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <form>
+      <p>Ad: <input class="control" type="text" /></p>
+
+      <p>
+        Ögrenim Durumu:
+        <select class="control">
+          <option value="ilkokul">İlkokul</option>
+          <option value="ortaokul">Ortaokul</option>
+          <option value="lise">Lise</option>
+          <option value="üniversite">Üniversite</option>
+        </select>
+      </p>
+    </form>
+
+    <script>
+      $(document).ready(function () {
+        $(".control").change(function () {
+          console.log($(this).val());
+        });
+      });
+    </script>
+  </body>
+</html>
