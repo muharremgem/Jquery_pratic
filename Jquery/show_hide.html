@@ -13,13 +13,15 @@
     <script>
       $(document).ready(function () {
         $("#hide").click(function () {
-          $("p").hide();
+          $("p").hide(2000);
         });
         $("#show").click(function () {
-          $("p").show();
+          $("p").show(2000, function () {
+            alert("paragraf gösterildi");
+          });
         });
         $("#toggle").click(function () {
-          $("p").toggle();
+          $("p").toggle("fast");
         });
       });
     </script>
