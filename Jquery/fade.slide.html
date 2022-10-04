@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>Jquery</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <p>Sıfırdan İleri Düzey Web Geliştirme</p>
+
+      <img src="04.jpeg" width="150px" />
+    </div>
+
+    <br />
+
+    <button id="slideup">Slide Up</button>
+    <button id="slidedown">Slide Down</button>
+    <button id="toggle">Toggle</button>
+
+    <br /><br />
+
+    <button id="fadein">Fade In</button>
+    <button id="fadeout">Fade Out</button>
+    <button id="fadeto">Fade To</button>
+
+    <button id="toggle2">Toggle</button>
+
+    <script>
+      $(document).ready(function () {
+        $("#slideup").click(function () {
+          $("div").slideUp(3000);
+        });
+        $("#slidedown").click(function () {
+          $("div").slideDown(1000, function () {
+            alert("Div gösterildi");
+          });
+        });
+        $("#toggle").click(function () {
+          $("div").slideToggle("slow");
+        });
+
+        $("#fadein").click(function () {
+          $("div").fadeIn("slow");
+        });
+
+        $("#fadeout").click(function () {
+          $("div").fadeOut(1000, function () {
+            alert("Div gizlendi");
+          });
+        });
+
+        $("#fadeto").click(function () {
+          $("div").fadeTo("slow", 0.5);
+        });
+
+        $("#toggle2").click(function () {
+          $("div").fadeToggle("slow");
+        });
+      });
+    </script>
+  </body>
+</html>
